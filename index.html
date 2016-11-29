@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Probando Vue</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+  </head>
+  <body>
+    <hr>
+      <div class="col-lg-6 col-lg-offset-3" id="principal">
+        <div class="alert alert-warning alert-dismissible" role="alert" v-if="!allinfo">
+          <strong>Hey!</strong> Por favor, rellena todos los campos antes de enviar el formulario.
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <input v-model='name' type="text" name="name" autocomplete='off' placeholder="Nombre" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <input v-model='edad' type="number" name="edad" autocomplete='off' placeholder="Edad" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <input v-model='email' type="email" name="email" autocomplete='off' placeholder="email" class="form-control">
+          </div>
+
+
+          <div class="form-group">
+
+            <div class="col-lg-3 col-lg-offset-5" v-if='allinfo'>
+              <a href="#" class="btn btn-default">Limpiar</a>
+              <input type="submit" value="Enviar" class="btn btn-success">
+            </div>
+
+          </div>
+        </div><hr>
+        <div class="row">
+          <pre>
+            {{ $data | json }}
+          </pre>
+        </div>
+
+      </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

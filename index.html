@@ -13,7 +13,7 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <input v-model='name' type="text" name="name" autocomplete='off' placeholder="Nombre" class="form-control">
+            <input v-model='nombre' type="text" name="name" autocomplete='off' placeholder="Nombre" class="form-control">
           </div>
 
           <div class="form-group">
@@ -28,7 +28,7 @@
           <div class="form-group">
 
             <div class="col-lg-3 col-lg-offset-5" v-if='allinfo'>
-              <a href="#" class="btn btn-default">Limpiar</a>
+              <button @click="borrarcampos" href="#" class="btn btn-default">Limpiar</button>
               <input type="submit" value="Enviar" class="btn btn-success">
             </div>
 

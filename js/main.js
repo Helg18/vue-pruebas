@@ -2,14 +2,22 @@ new Vue({
   el: '#principal',
 
   data:{
-    name:'',
+    nombre:'',
     edad:'',
     email:''
+  },
+  methods:{
+    borrarcampos: function() {
+      this.nombre='';
+      this.edad='';
+      this.email='';
+      return true;
+    }
   },
 
   computed:{
     allinfo: function(){
-      return this.name && this.edad && this.email;
+      return this.nombre && this.edad && this.email;
     }
   }
 });
